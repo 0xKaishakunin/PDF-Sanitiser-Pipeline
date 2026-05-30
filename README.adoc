@@ -1,3 +1,12 @@
 = PDF-Sanitiser-Pipeline
 
 
+== PDF-Quarantaene.sh
+
+Das Skript aus der C3-Laptop/CachyOS Härten Doku. 
+
+Iteriert durch `/srv/DrSchnabel/in` und bereinigt jede PDF mit `mutool` nach `out/`
+
+== Ghostscript-Sanitise.sh
+
+Bereinigt mit Ghostscript eine PDF und baut sie komplett neu. 
