@@ -1,6 +1,7 @@
 #!/bin/bash
+IN_DIR="${IN_DIR:-input}"
 
-for pdf in "/input/*.pdf"; 
+for pdf in "$IN_DIR"/*.pdf;
 do
 	base=$(basename "$pdf" .pdf)
     zeitstempel=$(date +%y%m%d%H%M)
