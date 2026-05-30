@@ -1,6 +1,11 @@
 name: PDF-Sanitiser
+#on:
+  #workflow_dispatch:
+### Auto trigger!
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - 'input/*.pdf'
 jobs:
   sanitise:
     runs-on: ubuntu-24.04
