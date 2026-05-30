@@ -1,5 +1,13 @@
 = PDF-Sanitiser-Pipeline
 
+== PDFs in Github bereinigen
+
+Diese Pipeline bereinigt alle PDFs im Verzeichnis `/input/` mit mutool und Ghostscript. Die resultierenden PDFs werden als Artefakte zum Download in einer ZIP bereitgestellt. An den Dateinamen wird ein Zeitstempel angehangen. 
+
+Die Pipeline wird jedesmal ausgeführt, wenn sich die PDFs in  `/input/` ändern. 
+
+WARNING: Die PDFs werden natürlich von Github gelesen, also keine geheimen/sensiblen PDFs hochladen!
+
 
 == PDF-Quarantaene.sh
 
