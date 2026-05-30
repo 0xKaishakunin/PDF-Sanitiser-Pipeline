@@ -18,3 +18,4 @@ jobs:
         with:
           name: sanitised-pdfs
           path: output/*.pdf
+          if-no-files-found: error
