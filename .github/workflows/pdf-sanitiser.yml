@@ -1,11 +1,9 @@
 name: PDF-Sanitiser
-
 on:
   workflow_dispatch:
-
 jobs:
   sanitise:
-    runs-on: ubuntu-26.04
+    runs-on: ubuntu-24.04
     steps:
       - name: auschecken
         uses: actions/checkout@v4
@@ -13,3 +11,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y mupdf-tools ghostscript
+      - name: PDFs bereinigen
+        run: /bin/bash ./sanitise.sh
+      - name: PDF hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: sanitised-pdfs
+          path: output/*.pdf
